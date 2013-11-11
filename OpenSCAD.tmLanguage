@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>scad</string>
+	</array>
+	<key>name</key>
+	<string>OpenSCAD</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>Variables like $PARAM1, $TM_SELECTION...</string>
+			<key>match</key>
+			<string>[A-Za-z][A-Za-z0-9_]+</string>
+			<key>name</key>
+			<string>meta.block.c</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\/\/</string>
+			<key>end</key>
+			<string>\
+</string>
+			<key>name</key>
+			<string>comment.block.c</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>$self</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>.</string>
+					<key>name</key>
+					<string>comment.block.c</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\(</string>
+			<key>beginCaptures</key>
+			<dict>
+			</dict>
+			<key>end</key>
+			<string>\)</string>
+			<key>name</key>
+			<string>storage.modifier.c</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>$self</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>.</string>
+					<key>name</key>
+					<string>storage.type.c</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.scad</string>
+	<key>uuid</key>
+	<string>837e26cc-44e6-49bb-9011-9d145939c930</string>
+</dict>
+</plist>

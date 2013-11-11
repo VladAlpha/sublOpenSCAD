@@ -1,0 +1,39 @@
+// [PackageDev] target_format: plist, ext: tmLanguage
+    { "name": "OpenSCAD",
+  "scopeName": "source.scad",
+  "fileTypes": ["scad"],
+  "uuid": "837e26cc-44e6-49bb-9011-9d145939c930",
+
+  "patterns": [
+
+    { "match": "[A-Za-z][A-Za-z0-9_]+",
+      "name": "meta.block.c",
+      "comment": "Variables like $PARAM1, $TM_SELECTION..."
+    },
+
+    { "name": "comment.block.c",
+      "begin": "\\/\\/",
+        "patterns": [
+          { "include": "$self" },
+          { "name": "comment.block.c",
+            "match": "."
+          }
+        ],
+      "end": "\\\r"
+    },
+
+    { "name": "storage.modifier.c ",
+      "begin": "\\(",
+      "beginCaptures": {
+        },
+        "patterns": [
+          { "include": "$self" },
+          { "name": "storage.type.c",
+            "match": "."
+          }
+        ],
+      "end": "\\)"
+    }
+
+  ]
+}
