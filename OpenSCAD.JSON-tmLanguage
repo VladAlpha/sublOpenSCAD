@@ -6,19 +6,19 @@
 
   "patterns": [
 
-    { "match": "[A-Za-z][A-Za-z0-9_]+",
-      "name": "meta.block.c",
-      "comment": "Variables like $PARAM1, $TM_SELECTION..."
-    },
-
-    { "name": "comment.line.c",
+    { "name": "comment.line.c", //single line comments
       "begin": "\\/\\/",
       "end": "\\\r"
     },
 
-    { "name": "comment.block.c",
+    { "name": "comment.block.c",  //comments blocked in /*  */
       "begin": "\\/\\*",
       "end": "\\*\\/"
+    },
+
+    { "name": "entity.name.function",  //moduels
+      "begin": "module *",
+      "end": "\\}"
     },
 
     { "name": "storage.modifier.c ",

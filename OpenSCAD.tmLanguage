@@ -25,20 +25,7 @@
 			<string>\
 </string>
 			<key>name</key>
-			<string>comment.block.c</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>.</string>
-					<key>name</key>
-					<string>comment.block.c</string>
-				</dict>
-			</array>
+			<string>comment.line.c</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -50,24 +37,11 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>\/\*</string>
+			<string>module *</string>
 			<key>end</key>
-			<string>\*\/</string>
+			<string>\}</string>
 			<key>name</key>
-			<string>comment.block.c</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>include</key>
-					<string>$self</string>
-				</dict>
-				<dict>
-					<key>match</key>
-					<string>.</string>
-					<key>name</key>
-					<string>comment.block.c</string>
-				</dict>
-			</array>
+			<string>entity.name.function</string>
 		</dict>
 		<dict>
 			<key>begin</key>
