@@ -42,6 +42,35 @@
 		</dict>
 		<dict>
 			<key>begin</key>
+			<string>\/\*</string>
+			<key>end</key>
+			<string>\*\/</string>
+			<key>name</key>
+			<string>comment.block.c</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\/\*</string>
+			<key>end</key>
+			<string>\*\/</string>
+			<key>name</key>
+			<string>comment.block.c</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>$self</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>.</string>
+					<key>name</key>
+					<string>comment.block.c</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
 			<string>\(</string>
 			<key>beginCaptures</key>
 			<dict>
@@ -49,7 +78,7 @@
 			<key>end</key>
 			<string>\)</string>
 			<key>name</key>
-			<string>storage.modifier.c</string>
+			<string>storage.modifier.c </string>
 			<key>patterns</key>
 			<array>
 				<dict>
