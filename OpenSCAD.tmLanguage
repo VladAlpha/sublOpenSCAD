@@ -11,14 +11,6 @@
 	<key>patterns</key>
 	<array>
 		<dict>
-			<key>comment</key>
-			<string>Variables like $PARAM1, $TM_SELECTION...</string>
-			<key>match</key>
-			<string>[A-Za-z][A-Za-z0-9_]+</string>
-			<key>name</key>
-			<string>meta.block.c</string>
-		</dict>
-		<dict>
 			<key>begin</key>
 			<string>\/\/</string>
 			<key>end</key>
@@ -37,22 +29,19 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>module *</string>
-			<key>end</key>
-			<string>\}</string>
-			<key>name</key>
-			<string>entity.name.function</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>\(</string>
+			<string>^module </string>
 			<key>beginCaptures</key>
 			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other</string>
+				</dict>
 			</dict>
 			<key>end</key>
 			<string>\)</string>
 			<key>name</key>
-			<string>storage.modifier.c </string>
+			<string>meta.function</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -61,9 +50,21 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>.</string>
+					<string>\w</string>
 					<key>name</key>
-					<string>storage.type.c</string>
+					<string>entity.name.function</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>.+\=</string>
+					<key>name</key>
+					<string>variable.parameter</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>([0-9])</string>
+					<key>name</key>
+					<string>constant.numeric</string>
 				</dict>
 			</array>
 		</dict>

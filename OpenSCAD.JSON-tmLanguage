@@ -16,23 +16,28 @@
       "end": "\\*\\/"
     },
 
-    { "name": "entity.name.function",  //moduels
-      "begin": "module *",
-      "end": "\\}"
-    },
-
-    { "name": "storage.modifier.c ",
-      "begin": "\\(",
+    { "name": "meta.function",  //modules declaration and parameters
+      "begin": "^module ",      //I think forces start of string
+      "end": "\\)",
       "beginCaptures": {
-        },
-        "patterns": [
-          { "include": "$self" },
-          { "name": "storage.type.c",
-            "match": "."
-          }
-        ],
-      "end": "\\)"
-    }
+         "0": { "name": "keyword.other" }
+       },
+       "patterns": [
+			{ "include": "$self" },
+        
+			{ "name": "entity.name.function",
+				"match": "\\w"
+			},
+
+			{ "name": "variable.parameter",
+				"match": ".+\\="
+				},
+
+			{ "name": "constant.numeric",
+			"match": "([0-9])"
+			}
+		]
+}
 
   ]
 }
