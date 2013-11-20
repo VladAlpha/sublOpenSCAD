@@ -11,14 +11,8 @@
       "comment": "Variables like $PARAM1, $TM_SELECTION..."
     },
 
-    { "name": "comment.block.c",
+    { "name": "comment.line.c",
       "begin": "\\/\\/",
-        "patterns": [
-          { "include": "$self" },
-          { "name": "comment.block.c",
-            "match": "."
-          }
-        ],
       "end": "\\\r"
     },
 
@@ -27,16 +21,6 @@
       "end": "\\*\\/"
     },
 
-    { "name": "comment.block.c",
-      "begin": "\\/\\*",
-        "patterns": [
-          { "include": "$self" },
-          { "name": "comment.block.c",
-            "match": "."
-          }
-        ],
-      "end": "\\*\\/"
-    },
     { "name": "storage.modifier.c ",
       "begin": "\\(",
       "beginCaptures": {
