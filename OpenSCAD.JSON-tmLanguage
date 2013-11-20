@@ -22,6 +22,17 @@
       "end": "\\\r"
     },
 
+    { "name": "comment.block.c",
+      "begin": "\\/\\*",
+        "patterns": [
+          { "include": "$self" },
+          { "name": "comment.block.c",
+            "match": "."
+          }
+        ],
+      "end": "\\*\\/"
+    },
+
     { "name": "storage.modifier.c ",
       "begin": "\\(",
       "beginCaptures": {
