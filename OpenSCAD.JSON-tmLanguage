@@ -37,7 +37,43 @@
 			"match": "([0-9])"
 			}
 		]
-}
+	},
+
+	{ "match": "\\b(abs|acos|asin|atan|atan2|ceil|cos|exp|floor|ln|log|lookup|max|min|pow|rands|round|sign|sin|sqrt|tan|str)\\b",
+  		"name": "keyword.scad",
+  		"comment": "builting openscad keywords"
+	},
+
+
+  { "match": "\\b(union|difference|intersection|render|intersection_for)\\b",
+      "name": "keyword.scad",
+      "comment": "builting openscad booleans"
+  },
+
+  { "match": "\\b(scale|rotate|translate|mirror|multmatrix|color|minkowski)\\b",
+      "name": "keyword.scad",
+      "comment": "builting openscad transforms"
+  },
+  
+    { "match": "\\b(cube|sphere|cylinder|polyhedron|surface)\\b",
+      "name": "keyword.scad",
+      "comment": "builting openscad solids"
+  },
+
+    { "match": "\\b(square|circle|polygon|import_dxf)\\b",
+      "name": "keyword.scad",
+      "comment": "builting openscad 2d"
+  },
+
+    { "match": "\\b()\\b",
+      "name": "keyword.operator.scad",
+      "comment": "builting openscad fancy varieables"
+  },
+
+  { "match": "\\+|-|<|\\*|/|%|>|>=|<=|==|!=|&&|\\|\\||!|?:",   //donet forget -
+      "name": "keyword.operator.scad",
+      "comment": "builting openscad operator"
+  },
 
   ]
 }

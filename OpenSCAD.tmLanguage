@@ -68,6 +68,14 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>comment</key>
+			<string>builting openscad keywords</string>
+			<key>match</key>
+			<string>\b(abs|acos|asin|atan|atan2|ceil|cos|exp|floor|ln|log|lookup|max|min|pow|rands|round|sign|sin|sqrt|tan|str)\b</string>
+			<key>name</key>
+			<string>keyword.scad</string>
+		</dict>
 	</array>
 	<key>scopeName</key>
 	<string>source.scad</string>
