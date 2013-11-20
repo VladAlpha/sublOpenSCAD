@@ -6,34 +6,34 @@
 
   "patterns": [
 
-    { "name": "comment.line.c", //single line comments
+    { "name": "comment.line.scad", //single line comments
       "begin": "\\/\\/",
       "end": "\\\r"
     },
 
-    { "name": "comment.block.c",  //comments blocked in /*  */
+    { "name": "comment.block.scad",  //comments blocked in /*  */
       "begin": "\\/\\*",
       "end": "\\*\\/"
     },
 
-    { "name": "meta.function",  //modules declaration and parameters
+    { "name": "meta.function.scad",  //modules declaration and parameters
       "begin": "^module ",      //I think forces start of string
       "end": "\\)",
       "beginCaptures": {
-         "0": { "name": "keyword.other" }
+         "0": { "name": "keyword.other.scad" }
        },
        "patterns": [
 			{ "include": "$self" },
         
-			{ "name": "entity.name.function",
+			{ "name": "entity.name.function.scad",
 				"match": "\\w"
 			},
 
-			{ "name": "variable.parameter",
+			{ "name": "variable.parameter.scad",
 				"match": ".+\\="
 				},
 
-			{ "name": "constant.numeric",
+			{ "name": "constant.numeric.scad",
 			"match": "([0-9])"
 			}
 		]
@@ -55,25 +55,35 @@
       "comment": "builting openscad transforms"
   },
   
-    { "match": "\\b(cube|sphere|cylinder|polyhedron|surface)\\b",
-      "name": "keyword.scad",
+  { "match": "\\b(cube|sphere|cylinder|polyhedron|surface)\\b",
+      "name": "support.function.scad",
       "comment": "builting openscad solids"
   },
 
-    { "match": "\\b(square|circle|polygon|import_dxf)\\b",
-      "name": "keyword.scad",
+  { "match": "\\b(square|circle|polygon|import_dxf)\\b",
+      "name": "support.function.scad",
       "comment": "builting openscad 2d"
   },
 
-    { "match": "\\b()\\b",
+  { "match": "\\b()\\b",
       "name": "keyword.operator.scad",
       "comment": "builting openscad fancy varieables"
   },
 
-  { "match": "\\+|-|<|\\*|/|%|>|>=|<=|==|!=|&&|\\|\\||!|?:",   //donet forget -
+    { "match": "\\b(if|for)\\b",
+      "name": "keyword.control.scad",
+      "comment": "builting openscad fancy variables"
+  },
+
+  { "match": "\\b\\w+ ?\\(",
+      "name": "entity.name.function.scad",
+      "comment": "calls to modules"
+  },
+
+  { "match": "\\+|-|<|\\*|/|%|>|>=|<=|==|!=|&&|\\|\\||!|\\?:",   //donet forget -
       "name": "keyword.operator.scad",
       "comment": "builting openscad operator"
-  },
+  }
 
   ]
 }

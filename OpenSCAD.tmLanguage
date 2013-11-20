@@ -17,7 +17,7 @@
 			<string>\
 </string>
 			<key>name</key>
-			<string>comment.line.c</string>
+			<string>comment.line.scad</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -25,7 +25,7 @@
 			<key>end</key>
 			<string>\*\/</string>
 			<key>name</key>
-			<string>comment.block.c</string>
+			<string>comment.block.scad</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -35,13 +35,13 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.other</string>
+					<string>keyword.other.scad</string>
 				</dict>
 			</dict>
 			<key>end</key>
 			<string>\)</string>
 			<key>name</key>
-			<string>meta.function</string>
+			<string>meta.function.scad</string>
 			<key>patterns</key>
 			<array>
 				<dict>
@@ -52,19 +52,19 @@
 					<key>match</key>
 					<string>\w</string>
 					<key>name</key>
-					<string>entity.name.function</string>
+					<string>entity.name.function.scad</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>.+\=</string>
 					<key>name</key>
-					<string>variable.parameter</string>
+					<string>variable.parameter.scad</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>([0-9])</string>
 					<key>name</key>
-					<string>constant.numeric</string>
+					<string>constant.numeric.scad</string>
 				</dict>
 			</array>
 		</dict>
@@ -75,6 +75,70 @@
 			<string>\b(abs|acos|asin|atan|atan2|ceil|cos|exp|floor|ln|log|lookup|max|min|pow|rands|round|sign|sin|sqrt|tan|str)\b</string>
 			<key>name</key>
 			<string>keyword.scad</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>builting openscad booleans</string>
+			<key>match</key>
+			<string>\b(union|difference|intersection|render|intersection_for)\b</string>
+			<key>name</key>
+			<string>keyword.scad</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>builting openscad transforms</string>
+			<key>match</key>
+			<string>\b(scale|rotate|translate|mirror|multmatrix|color|minkowski)\b</string>
+			<key>name</key>
+			<string>keyword.scad</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>builting openscad solids</string>
+			<key>match</key>
+			<string>\b(cube|sphere|cylinder|polyhedron|surface)\b</string>
+			<key>name</key>
+			<string>support.function.scad</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>builting openscad 2d</string>
+			<key>match</key>
+			<string>\b(square|circle|polygon|import_dxf)\b</string>
+			<key>name</key>
+			<string>support.function.scad</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>builting openscad fancy varieables</string>
+			<key>match</key>
+			<string>\b()\b</string>
+			<key>name</key>
+			<string>keyword.operator.scad</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>builting openscad fancy variables</string>
+			<key>match</key>
+			<string>\b(if|for)\b</string>
+			<key>name</key>
+			<string>keyword.control.scad</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>calls to modules</string>
+			<key>match</key>
+			<string>\b\w+ ?\(</string>
+			<key>name</key>
+			<string>entity.name.function.scad</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>builting openscad operator</string>
+			<key>match</key>
+			<string>\+|-|&lt;|\*|/|%|&gt;|&gt;=|&lt;=|==|!=|&amp;&amp;|\|\||!|\?:</string>
+			<key>name</key>
+			<string>keyword.operator.scad</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
